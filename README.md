@@ -10,3 +10,12 @@
   9. main.js 项目的入口调用APP.vue
   10. package.json  npm包配置文件
   11. mock.js 引入mock数据
+
+
+git config --global http.proxy "127.0.0.1:41091"
+git config --global https.proxy "127.0.0.1:41091"
+
+
+git config --global --unset http.proxy
+ 
+git config --global --unset https.proxy

@@ -8,7 +8,7 @@ import axios from 'axios'
 
 Vue.use(Element)
 Vue.config.productionTip = false
-Vue.prototype.$axios = axios
+Vue.prototype.$axios = axios //表示可以用$axios 使用axios库
 require("./mock") //引入mock数据，关闭则注释该行
 
 new Vue({
