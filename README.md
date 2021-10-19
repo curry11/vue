@@ -13,6 +13,7 @@
 
 
 git config --global http.proxy "127.0.0.1:41091"
+
 git config --global https.proxy "127.0.0.1:41091"
 
 
