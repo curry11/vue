@@ -5,19 +5,24 @@ import Login from '../views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
+  { //预先加载
+    path: '/login',
     name: 'Login',
     component: Login
   },
-  // {
+  // {  懒加载模式
   //   path: '/about',
   //   name: 'About',
   //   // route level code-splitting
   //   // this generates a separate chunk (about.[hash].js) for this route
   //   // which is lazy-loaded when the route is visited.
   //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+  // } 
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/Login.vue')
+  }
 ]
 
 const router = new VueRouter({
