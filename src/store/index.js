@@ -4,9 +4,14 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+  state: {  //状态管理
+    token: ''
   },
-  mutations: {
+  mutations: {  //操作token
+    SET_TOKEN: (state, token) => {  //将穿过来的token  存入到state中的token
+      state.token = token
+      localStorage.setItem("token", token)
+    },
   },
   actions: {
   },
