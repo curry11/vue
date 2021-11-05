@@ -85,7 +85,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {   //通过ref将表单注册成一个实例，然后进行校验
         if (valid) {
-          this.$axios.post('/login?' + qs.stringify(this.loginForm)).then(res => {  //通过axios发送请求
+          this.$axios.post('/login', this.loginForm).then(res => {  //通过axios发送请求
 
             console.log(res)
 
