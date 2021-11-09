@@ -7,7 +7,13 @@ export default {
 		menuList: [],
 		// 权限数据      
 		permList: [],
-		hasRoute: false
+		hasRoute: false,
+
+		editableTabsValue: 'Index',  //管理tabs
+		editableTabs: [{
+			title: '首页',
+			name: 'Index',
+		}],
 	},
 	mutations: {
 		changeRouteStatus(state, hasRoute) {
@@ -19,6 +25,28 @@ export default {
 		},
 		setPermList(state, authoritys) {
 			state.permList = authoritys
-		}
+		},
+
+		//退出登录清空各种tabs等
+		resetState: (state) => {
+			state.menuList = '',
+				state.permList = '',
+				state.hasRoute = false
+		},
+
+		addTab(state, tab) {  //全局管理tabs
+
+			//判定tabs中是否有重复的元素
+			let indx = state.editableTabs.findIndex(e => e.name === tab.name)
+
+			if (indx === -1) {  //如果没有再新增tab
+				state.editableTabs.push({
+					title: tab.title,
+					name: tab.name,
+				});
+			}
+
+			state.editableTabsValue = tab.name;
+		},
 	}
 }

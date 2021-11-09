@@ -29,6 +29,7 @@
       </el-header>
       <el-main>
         <!-- 增加子路由 -->
+        <tabs></tabs>
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -39,11 +40,13 @@
 
 // home 作为父路由 indx作为子路由
 import SideMenu from "./inc/SideMenu.vue"
+import Tabs from "./inc/Tabs.vue"
 
 export default {
   name: "Home",
   components: {   //引用组件
-    SideMenu
+    SideMenu,
+    Tabs
   },
   data() {
     return {
@@ -107,10 +110,11 @@ export default {
 }
 
 .el-main {
-  background-color: #e9eef3;
+  /* background-color: #e9eef3; */
   color: #333;
   text-align: center;
-  line-height: 160px;
+  /* line-height: 160px; */
+  padding: 0;
 }
 
 a {

@@ -12,9 +12,9 @@
   11. mock.js 引入mock数据
 
 
-git config --global http.proxy "127.0.0.1:41091"
+git config --global http.proxy "127.0.0.1:41092"
 
-git config --global https.proxy "127.0.0.1:41091"
+git config --global https.proxy "127.0.0.1:41092"
 
 
 git config --global --unset http.proxy

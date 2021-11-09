@@ -8,6 +8,24 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "APP",
+  watch: {  //当初始加载页面的时候，有可能重新刷新页面
+    $route(to, from) {
+      if (to.path != '/login') {
+        let obj = {
+          name: to.name,
+          title: to.meta.title,
+        }
+
+        this.$store.commit("addTab", obj)
+      }
+    }
+  }
+}
+</script>
+
 <style>
 html,
 body,
