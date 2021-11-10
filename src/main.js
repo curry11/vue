@@ -5,6 +5,8 @@ import store from './store'
 import Element from 'element-ui'   //引入elemetnUI
 import "element-ui/lib/theme-chalk/index.css"
 // import axios from 'axios'  没有前置后置拦截
+import global from './globalFun'  //引入全局按钮
+
 
 import axios from './axios'  //创建的实例 有前置后置拦截
 Vue.use(Element)

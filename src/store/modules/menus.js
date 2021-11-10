@@ -29,9 +29,15 @@ export default {
 
 		//退出登录清空各种tabs等
 		resetState: (state) => {
-			state.menuList = '',
-				state.permList = '',
-				state.hasRoute = false
+			state.menuList = []
+			state.permList = []
+
+			state.hasRoutes = false
+			state.editableTabsValue = 'Index'
+			state.editableTabs = [{
+				title: '首页',
+				name: 'Index',
+			}]
 		},
 
 		addTab(state, tab) {  //全局管理tabs

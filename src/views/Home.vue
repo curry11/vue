@@ -30,7 +30,9 @@
       <el-main>
         <!-- 增加子路由 -->
         <tabs></tabs>
-        <router-view></router-view>
+        <div style="margin: 0 15px">
+          <router-view></router-view>
+        </div>
       </el-main>
     </el-container>
   </el-container>
@@ -112,7 +114,7 @@ export default {
 .el-main {
   /* background-color: #e9eef3; */
   color: #333;
-  text-align: center;
+  /* text-align: center; */
   /* line-height: 160px; */
   padding: 0;
 }
