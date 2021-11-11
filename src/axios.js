@@ -3,7 +3,7 @@ import router from "./router"
 import Element from "element-ui"
 
 // axios 前置拦截后置拦截
-// axios.defaults.baseURL = "http://localhost:8081"  //定义全局的baseUrl 访问后端
+axios.defaults.baseURL = "http://localhost:8082"  //定义全局的baseUrl 访问后端
 
 const request = axios.create({    //定义全局request 可以统一封装head、超时时间等
   timeout: 5000,
