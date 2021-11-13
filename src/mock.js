@@ -9,14 +9,14 @@ let Result = {
   data: null
 }
 
-Mock.mock('/captcha', 'get', () => {
+// Mock.mock('/captcha', 'get', () => {
 
-  Result.data = {
-    token: Random.string(32),
-    captchaImg: Random.dataImage('120x40', 'p7n5w')
-  }
-  return Result
-})
+//   Result.data = {
+//     token: Random.string(32),
+//     captchaImg: Random.dataImage('120x40', 'p7n5w')
+//   }
+//   return Result
+// })
 
 
 Mock.mock('/login', 'post', () => {

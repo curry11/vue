@@ -54,8 +54,6 @@
 
 <script>
 
-import qs from 'qs'
-
 export default {
   name: "Login",
   data() {
@@ -63,7 +61,7 @@ export default {
       loginForm: {
         username: 'admin',
         password: '111111',
-        code: '11111',
+        code: '',
         token: ''
       },
       rules: {
@@ -84,8 +82,8 @@ export default {
   methods: {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {   //通过ref将表单注册成一个实例，然后进行校验
-        if (valid) {
-          this.$axios.post('/login', this.loginForm).then(res => {  //通过axios发送请求
+        if (valid) {    //this.loginForm 是json 格式，需要用qs转换成form表单格式
+          this.$axios.post('/login', this.$qs.stringify(this.loginForm)).then(res => {  //通过axios发送请求
 
             console.log(res)
 
