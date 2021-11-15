@@ -25,7 +25,12 @@
         <el-form-item label="用户名" prop="username" style="width: 380px">
           <el-input v-model="loginForm.username"></el-input>
         </el-form-item>
-        <el-form-item label="密码" prop="password" style="width: 380px">
+        <el-form-item
+          label="密码"
+          type="password"
+          prop="password"
+          style="width: 380px"
+        >
           <el-input v-model="loginForm.password" type="password"></el-input>
         </el-form-item>
         <el-form-item label="验证码" prop="code" style="width: 380px">
